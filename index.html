@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#050607" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="A local-first expressive robotic face prototype for Galaxy S24." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Presence — Expressive Agent</title>
+</head>
+<body data-state="ATTEND">
+  <main class="stage" aria-label="Expressive robotic face">
+    <div class="atmosphere" aria-hidden="true"></div>
+    <button class="panel-trigger" aria-label="Open developer controls" title="Developer controls"></button>
+    <div class="status" aria-live="polite"><span></span><b>ATTEND</b></div>
+
+    <section class="face" aria-hidden="true">
+      <div class="brow brow-left"></div>
+      <div class="brow brow-right"></div>
+      <div class="eye eye-left">
+        <div class="eyelid upper"></div><div class="eyelid lower"></div>
+        <div class="iris"><div class="pupil"></div><i></i></div>
+      </div>
+      <div class="eye eye-right">
+        <div class="eyelid upper"></div><div class="eyelid lower"></div>
+        <div class="iris"><div class="pupil"></div><i></i></div>
+      </div>
+      <div class="voice" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <aside class="panel" aria-label="Developer controls">
+      <div class="panel-head"><div><small>BEHAVIOR LAB</small><h1>Expression states</h1></div><button class="close" aria-label="Close controls">×</button></div>
+      <div class="states" role="group" aria-label="Expression state">
+        <button data-set-state="SLEEP">Sleep</button><button data-set-state="ATTEND" class="active">Attend</button>
+        <button data-set-state="LISTEN">Listen</button><button data-set-state="THINK">Think</button>
+        <button data-set-state="SPEAK">Speak</button><button data-set-state="ACKNOWLEDGE">Acknowledge</button>
+      </div>
+      <label>GAZE — X <output id="xValue">0</output><input id="gazeX" type="range" min="-1" max="1" value="0" step="0.01" /></label>
+      <label>GAZE — Y <output id="yValue">0</output><input id="gazeY" type="range" min="-1" max="1" value="0" step="0.01" /></label>
+      <div class="panel-foot"><span>Tap upper-left corner to toggle</span><button id="centerGaze">Center gaze</button></div>
+    </aside>
+    <div class="scrim"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
