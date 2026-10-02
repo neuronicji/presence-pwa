@@ -18,7 +18,9 @@
   <main class="stage" aria-label="Expressive robotic face">
     <div class="atmosphere" aria-hidden="true"></div>
     <button class="panel-trigger" aria-label="Open expression controls" aria-expanded="false" aria-controls="controls" title="Expression controls"></button>
-    <button class="exit-fullscreen" id="exitFullscreen" aria-describedby="fullscreenHint">Exit fullscreen</button>
+    <button class="exit-fullscreen" id="exitFullscreen" aria-label="Exit fullscreen" title="Exit fullscreen" aria-describedby="fullscreenHint">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9h5V4m6 0v5h5m0 6h-5v5M9 20v-5H4" /></svg>
+    </button>
     <p class="fullscreen-hint" id="fullscreenHint" role="status" aria-live="polite"></p>
 
     <section class="face" aria-hidden="true">

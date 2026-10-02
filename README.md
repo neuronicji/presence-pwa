@@ -10,9 +10,9 @@ To try on a Galaxy S24, use a locally hosted HTTPS origin reachable by the phone
 
 ## Fullscreen exit follow-up (v0.11)
 
-The bottom-right **Exit fullscreen** button is always reachable without opening controls. It exits browser-requested fullscreen where supported, then shows a brief reminder to use the phone's system Home gesture or button. An installed PWA's manifest fullscreen/standalone display cannot be closed by this API; the button explains that limitation. The button does not navigate to or claim to open Android's launcher.
+The bottom-right **Exit fullscreen** icon is always reachable without opening controls. A subtle 34px outline surrounds the icon within a 52×52px touch target; its accessible name and hover title are “Exit fullscreen.” It exits browser-requested fullscreen where supported, then shows a brief reminder to use the phone's system Home gesture or button. An installed PWA's manifest fullscreen/standalone display cannot be closed by this API; the button explains that limitation. The button does not navigate to or claim to open Android's launcher.
 
-After Exit fullscreen or a native fullscreen exit, ordinary touches keep the page out of fullscreen. Open expression controls and choose **Enter fullscreen** to return deliberately. Fullscreen state follows browser fullscreen-change events. Unsupported APIs and rejected requests show a brief hint without breaking face controls or demo playback. User-facing version stays v0.11; changed assets use cache `presence-v0.11-r2`.
+After Exit fullscreen or a native fullscreen exit, ordinary touches keep the page out of fullscreen. Open expression controls and choose **Enter fullscreen** to return deliberately. Fullscreen state follows browser fullscreen-change events. Unsupported APIs and rejected requests show a brief hint without breaking face controls or demo playback. User-facing version stays v0.11; changed assets use cache `presence-v0.11-r3`.
 
 ## Revision
 
@@ -20,7 +20,7 @@ After Exit fullscreen or a native fullscreen exit, ordinary touches keep the pag
 - Curious asymmetric THINK with a subtle upward side gaze; modestly more open, still LISTEN.
 - Amber speaking accents just beneath the eyes, hidden state labels in normal view, controls explicitly marked manual/demo.
 - Accessible state buttons, inert hidden controls, focus restoration, and reduced motion for blinking, gaze motion, speaking accents and acknowledgement.
-- Document title, controls and manifest use Somnus Presence v0.11. PWA start URL and scope stay `./`; no new manifest ID or public URL. Cache is `presence-v0.11-r2` and activation removes only older Presence caches.
+- Document title, controls and manifest use Somnus Presence v0.11. PWA start URL and scope stay `./`; no new manifest ID or public URL. Cache is `presence-v0.11-r3` and activation removes only older Presence caches.
 
 ## Verification
 
