@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#050607" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,13 +12,12 @@
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <link rel="stylesheet" href="styles.css" />
-  <title>Presence — Expressive Agent</title>
+  <title>Somnus Presence v0.11</title>
 </head>
 <body data-state="ATTEND">
   <main class="stage" aria-label="Expressive robotic face">
     <div class="atmosphere" aria-hidden="true"></div>
-    <button class="panel-trigger" aria-label="Open developer controls" title="Developer controls"></button>
-    <div class="status" aria-live="polite"><span></span><b>ATTEND</b></div>
+    <button class="panel-trigger" aria-label="Open expression controls" aria-expanded="false" aria-controls="controls" title="Expression controls"></button>
 
     <section class="face" aria-hidden="true">
       <div class="brow brow-left"></div>
@@ -34,8 +33,8 @@
       <div class="voice" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
     </section>
 
-    <aside class="panel" aria-label="Developer controls">
-      <div class="panel-head"><div><small>BEHAVIOR LAB</small><h1>Expression states</h1></div><button class="close" aria-label="Close controls">×</button></div>
+    <aside class="panel" id="controls" aria-label="Expression controls" inert>
+      <div class="panel-head"><div><small>SOMNUS PRESENCE v0.11</small><h1>Expression states</h1><p class="demo-note">Manual / demo expressions. No microphone or Somnus connection.</p><div class="status" aria-live="polite"><span></span><b>ATTEND</b></div></div><button class="close" aria-label="Close controls">×</button></div>
       <div class="states" role="group" aria-label="Expression state">
         <button data-set-state="SLEEP">Sleep</button><button data-set-state="ATTEND" class="active">Attend</button>
         <button data-set-state="LISTEN">Listen</button><button data-set-state="THINK">Think</button>
